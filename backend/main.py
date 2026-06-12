@@ -48,12 +48,7 @@ def remediate():
         return {"error": "No files uploaded yet"}
     answer = run_agent(
         stored_files,
-        """Based on the resource metrics and error logs, generate a specific
-        remediation plan. For each issue found give:
-        1. What the problem is
-        2. Exact steps to fix it
-        3. How to prevent it in future
-        Keep each step concrete and technical."""
+        "Call get_resource_metrics and get_error_patterns tools. Then list specific fixes for each problem found. Be concrete and technical."
     )
     return {"remediation_plan": answer}
 
