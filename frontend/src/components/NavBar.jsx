@@ -32,13 +32,16 @@ export default function NavBar() {
       <div className="flex items-center gap-6">
         <ul className="flex items-center gap-6 text-xs font-bold uppercase tracking-wider text-text/70">
           <li>
+            <Link to="/" className="hover:text-text-title transition-colors">Home</Link>
+          </li>
+          <li>
             <Link to="/login" className="hover:text-text-title transition-colors">Login</Link>
           </li>
           <li>
             <Link to="/register" className="hover:text-text-title transition-colors">Register</Link>
           </li>
           <li>
-            <Link to="/connect-aws " className="hover:text-text-title transition-colors">Connect AWS</Link>
+            <Link to="/connect-aws" className="hover:text-text-title transition-colors" onClick={() => console.log("Connect to AWS clicked")}>Connect AWS</Link>
           </li>
         </ul>
 
